@@ -1,11 +1,8 @@
+<span id="show"></span>
 <script type="text/javascript">
-  const go = new URLSearchParams(window.location.search).get('go');
-  if (go) {
-    window.location.href = go;
-  }
   const show = new URLSearchParams(window.location.search).get('show');
   if (show) {
-    document.innerHTML = show;
+    document.getElementById("show").innerText = show;
   }
   const name = new URLSearchParams(window.location.search).get('name');
   const vault = new URLSearchParams(window.location.search).get('vault');
