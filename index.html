@@ -1,4 +1,5 @@
 <script type="text/javascript">
-  const q = new URLSearchParams(window.location.search).get('q');
-  if (q) window.location.href = `obsidian://open?vault=OJ&name=${encodeURIComponent(q)}`;
+  const name = new URLSearchParams(window.location.search).get('name');
+  const vault = new URLSearchParams(window.location.search).get('vault');
+  if (q) window.location.href = `obsidian://open?vault=${encodeURIComponent(vault)}&name=${encodeURIComponent(name)}`;
 </script>
