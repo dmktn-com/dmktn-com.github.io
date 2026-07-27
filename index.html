@@ -3,6 +3,6 @@
   const vault = new URLSearchParams(window.location.search).get('vault');
   if (name && vault) {
     const formattedName = "tag/" + name.replaceAll(':', '').toLowerCase() + ".md";
-    window.location.href = `obsidian://new?vault=${encodeURIComponent(vault)}&file=${encodeURIComponent(formattedName)}`;
+    window.location.href = `obsidian://new?vault=${encodeURIComponent(vault)}&file=${encodeURIComponent(formattedName)}&append`;
   }
 </script>
