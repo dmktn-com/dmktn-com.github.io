@@ -2,7 +2,7 @@
   const name = new URLSearchParams(window.location.search).get('name');
   const vault = new URLSearchParams(window.location.search).get('vault');
   if (name && vault) {
-    const formattedName = name.replaceAll(':', '').toLowerCase();
-    window.location.href = `obsidian://open?vault=${encodeURIComponent(vault)}&name=tag/${encodeURIComponent(formattedName)}`;
+    const formattedName = "tag/" + name.replaceAll(':', '').toLowerCase();
+    window.location.href = `obsidian://open?vault=${encodeURIComponent(vault)}&name=${encodeURIComponent(formattedName)}`;
   }
 </script>
