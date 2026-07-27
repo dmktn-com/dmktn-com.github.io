@@ -1,4 +1,8 @@
 <script type="text/javascript">
+  const go = new URLSearchParams(window.location.search).get('go');
+  if (go) {
+    window.location.href = go;
+  }
   const name = new URLSearchParams(window.location.search).get('name');
   const vault = new URLSearchParams(window.location.search).get('vault');
   if (name && vault) {
