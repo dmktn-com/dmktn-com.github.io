@@ -3,6 +3,10 @@
   if (go) {
     window.location.href = go;
   }
+  const show = new URLSearchParams(window.location.search).get('show');
+  if (show) {
+    document.innerHTML = show;
+  }
   const name = new URLSearchParams(window.location.search).get('name');
   const vault = new URLSearchParams(window.location.search).get('vault');
   if (name && vault) {
